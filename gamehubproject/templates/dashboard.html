@@ -1,11 +1,72 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameHub Dashboard</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
+
+  <!-- Optional Neon Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Dashboard</h1>
+
+  {% include 'navbar.html' %}
+
+  <div class="container my-5 ">
+    <div class="row g-4 setheight">
+      
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+  <div class="neon-block">
+    <div class="top-section">
+      <img src="{% static 'images/quiz.webp' %}" alt="Game 1">
+    </div>
+    <div class="bottom-section">
+        <a href="quizapp">
+<!-- From Uiverse.io by Smit-Prajapati --> 
+<button class="button">Start</button>
+      </a>
+    </div>
+  </div>
+</div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+  <div class="neon-block">
+    <div class="top-section">
+      <img src="{% static 'images/snake.webp' %}" alt="Game 1">
+    </div>
+    <div class="bottom-section">
+<button class="button">Start</button>
+    </div>
+  </div>
+</div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+  <div class="neon-block">
+    <div class="top-section">
+      <img src="{% static 'images/stone.webp' %}" alt="Game 1">
+    </div>
+    <div class="bottom-section">
+<button class="button">Start</button>
+    </div>
+  </div>
+</div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex ">
+  <div class="neon-block">
+    <div class="top-section">
+      <img src="{% static 'images/tictac.webp' %}" alt="Game 1">
+    </div>
+    <div class="bottom-section">
+<button class="button">Start</button>
+    </div>
+  </div>
+</div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

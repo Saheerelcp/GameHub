@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GameHub Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Neon Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    /* === Body Animation Background === */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Orbitron', sans-serif;
+      color: #00ff7f;
+      /* overflow: hidden; */
+      position: relative;
+      background: linear-gradient(270deg, #000000, #001a0f, #00261a, #001a0f, #000000);
+      background-size: 1000% 1000%;
+      animation: neonBG 20s ease infinite;
+    }
+
+    @keyframes neonBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* === Optional: Stars / Particles === */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(#00ff7f55 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: drift 60s linear infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @keyframes drift {
+      from { background-position: 0 0; }
+      to { background-position: 1000px 1000px; }
+    }
+
+    /* === Navbar Neon Style === */
+    .navbar {
+      background-color: #111 !important;
+      border-bottom: 2px solid #00ff7f;
+      box-shadow: 0 0 20px #00ff7f;
+      z-index: 1;
+      position: relative;
+    }
+
+    .navbar-brand {
+      color: #00ff7f !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-shadow: 0 0 8px #00ff7f, 0 0 20px #00ff7f;
+    }
+
+    .navbar-brand:hover {
+      color: #ffffff !important;
+      text-shadow: 0 0 10px #00ff7f;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">GameHub</a>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import redirect, render
 from gamehubapp.models import users
 
@@ -41,7 +42,16 @@ def loginpost(request):
     except Exception:
         return render(request,'login.html',{'message':'Invalid User'})
 
-    
+def quizapp(request):
+    return render(request,'quizapp.html')
 
-    
+def displayquestions(request):
+    data = {
+        'question': 'What is the capital of France?',
+        'a':'Paris',
+        'b':'Berlin',
+        'c':'Delhi',
+        'd':'London'
+    }
+    return JsonResponse(data)
     
